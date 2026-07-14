@@ -1,11 +1,7 @@
 import { useState } from "react";
 import GenesisCanvas from "./components/Canvas/GenesisCanvas";
-import IntroScreen from "./components/UI/IntroScreen";
-import HUD from "./components/UI/HUD";
 
 function App() {
-
-  const [started, setStarted] = useState(false);
 
   const [awakened, setAwakened] = useState(false);
 
@@ -15,21 +11,9 @@ function App() {
     <>
 
       <GenesisCanvas awakened={awakened} />
-      <HUD awakened={awakened}/>
 
 
-      {!started && (
-
-        <IntroScreen
-
-          onStart={() => setStarted(true)}
-
-        />
-
-      )}
-
-
-      {started && !awakened && (
+      {!awakened && (
 
         <button
 
@@ -41,16 +25,16 @@ function App() {
             left:"50%",
             transform:"translateX(-50%)",
             padding:"15px 35px",
-            borderRadius:"30px",
+            background:"#6cff70",
+            color:"black",
             border:"none",
-            background:"#7CFF70",
-            cursor:"pointer",
-            fontSize:"18px"
+            borderRadius:"30px",
+            fontSize:"18px",
+            cursor:"pointer"
           }}
 
         >
-
-          RESTORE LIFE
+          Restore Life
 
         </button>
 
@@ -62,6 +46,5 @@ function App() {
   );
 
 }
-
 
 export default App;
