@@ -8,7 +8,7 @@ import EnergyWave from "../Effects/EnergyWave";
 import LastTree from "../Environment/LastTree";
 import Wasteland from "../Environment/Wasteland";
 
-import CinematicCamera from "../Camera/CinematicCamera";
+import CinematicCamera from "../camera/CinematicCamera";
 import LivingRoots from "../Environment/LivingRoots";
 import Fireflies from "../Effects/Fireflies";
 
